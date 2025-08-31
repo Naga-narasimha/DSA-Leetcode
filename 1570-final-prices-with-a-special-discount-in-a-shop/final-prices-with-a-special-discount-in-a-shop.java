@@ -4,15 +4,18 @@ class Solution {
         
       for(int i=0;i<p.length;i++)
       {
-       arr[i]=p[i];
+       boolean flag=false;
         for(int j=i+1;j<p.length;j++)
         {
-            if(p[j]<=p[i])
+            if(p[i]>=p[j])
             {
              arr[i]=p[i]-p[j];
+             flag=true;
              break;
             }
         }
+        if(!flag)
+        arr[i]=p[i];
       }  
       return arr;
     }
