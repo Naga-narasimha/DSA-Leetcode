@@ -6,14 +6,14 @@ class Solution {
             for (int j = 0; j < n; j++) {
                 set.add(m[i][j]);
             }
-            if (set.size() != n) return false; // Row must have all numbers 1..n
+            if (set.size() != n) return false; 
         }
         for (int j = 0; j < n; j++) {
             HashSet<Integer> set = new HashSet<>();
             for (int i = 0; i < n; i++) {
                 set.add(m[i][j]);
             }
-            if (set.size() != n) return false; // Column must have all numbers 1..n
+            if (set.size() != n) return false;
         }
 
         return true;
